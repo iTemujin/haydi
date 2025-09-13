@@ -57,7 +57,7 @@
 {:else if ico.user}
   <User />
 {/if}
-<User />
+
 
 
 <style>
