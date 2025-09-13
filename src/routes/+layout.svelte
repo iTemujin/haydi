@@ -9,13 +9,19 @@
 
   import { fade } from 'svelte/transition';
 
-  import Search from './search_.svelte';
   import Menu from './menu_.svelte';
+  import Search from './search_.svelte';
+  import User from './user_.svelte'
+
 
 
 	let ico = $state({'menu': false, 'search': false, 'user': false, 'cart': false});
 	
   function thisopen(event) {
+    for (let key in ico) {
+      ico[key] = false
+    }
+
 		let name = event.currentTarget.dataset.ico;
 		ico[name] = !ico[name];
 		if (name === 'search' && ico.search) {
@@ -38,18 +44,20 @@
 
 
 <header>
-	<button class="ico" data-ico=menu on:click={thisopen} style="left: 1rem;"><i class="fas fa-bars"></i></button>
-	<button class="ico" data-ico=search on:click={thisopen} style="left: 3.5rem;"><i class="fas fa-magnifying-glass"></i></button>
-	<button class="ico" data-ico=user on:click={thisopen} style="right: 3.5rem;"><i class="fas fa-user-circle"></i></button>
-	<button class="ico" data-ico=cart on:click={thisopen} style="right: 1rem;"><i class="fas fa-shopping-cart"></i></button>
+	<button class="ico {ico.menu ? "be":""}" data-ico=menu on:click={thisopen} style="left: 1rem;"><i class="fas fa-bars"></i></button>
+	<button class="ico {ico.search ? "be":""}"  data-ico=search on:click={thisopen} style="left: 3.5rem;"><i class="fas fa-magnifying-glass"></i></button>
+	<button class="ico {ico.user ? "be":"" }" data-ico=user on:click={thisopen} style="right: 3.5rem;"><i class="fas fa-user-circle"></i></button>
+	<button class="ico {ico.cart ? "be":""}" data-ico=cart on:click={thisopen} style="right: 1rem;"><i class="fas fa-shopping-cart"></i></button>
 </header>
 
 {#if ico.menu}
   <Menu {ico} />
 {:else if ico.search}
   <Search {ico} />
+{:else if ico.user}
+  <User />
 {/if}
-
+<User />
 
 
 <style>
@@ -116,7 +124,7 @@ header::after {
   padding: 0.3rem;
 }
 
-.ico:hover {
+.ico.be {
   transition: all 0.3s ease-in-out;
   transform: scale(1.1) translateY(-2px);
   color: transparent;
