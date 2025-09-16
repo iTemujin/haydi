@@ -31,8 +31,8 @@
 @media screen and (max-width: 480px) {
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        padding: 10px;
+        gap: 2px;
+        padding: 0px;
     }
 }
 
@@ -41,9 +41,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    padding: 15px;
-    border-radius: 20px;
+    gap: 1px;
     background: rgba(255,255,255,0.1);
     backdrop-filter: blur(10px) saturate(180%);
     box-shadow: 0 8px 32px rgba(0,0,0,0.3);
@@ -59,7 +57,7 @@
 
 .product-card img {
     width: 100%;
-    border-radius: 12px;
+    height: 300px;
     object-fit: cover;
 }
 

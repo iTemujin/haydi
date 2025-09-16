@@ -101,7 +101,7 @@ header::before {
 }
 
 header::after {
-  content: "Shop";
+  content: "Ha";
   font-family: 'Inter', sans-serif;
   font-weight: 300;
   font-size: 1.2rem;
