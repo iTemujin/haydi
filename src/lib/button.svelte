@@ -17,10 +17,6 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        background: linear-gradient(135deg, #6e8efb, #a777e3);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
     }
 
     .colorfull_button:hover {
@@ -29,7 +25,6 @@
         color: white;
         transition: 0.3s;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-        -webkit-text-fill-color: white;
     }
 
     .colorfull_button:active {

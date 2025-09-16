@@ -24,7 +24,7 @@
 /* Kereső input */
 .search input {
   border: none;
-  background-color: var(--_input-bg);
+
   position: absolute;
   margin-top: 5vh;
   width: 80%;

@@ -40,8 +40,8 @@
    
 <style>
     .menu {
-        color: var(--Contcolor);
-        backdrop-filter: blur(8px);
+        color: #a777e3;
+        background-color: rgb(249, 250, 251);
         position: fixed;
         inset: 0;
         z-index: 100;
