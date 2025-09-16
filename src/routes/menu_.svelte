@@ -41,7 +41,7 @@
 <style>
     .menu {
         color: var(--Contcolor);
-        background-color: var(--_background);
+        backdrop-filter: blur(8px);
         position: fixed;
         inset: 0;
         z-index: 100;

@@ -18,8 +18,7 @@
   position: fixed;
   inset: 0;
   z-index: -1;
-  backdrop-filter: blur(10px);
-  background: linear-gradient(180deg, rgba(249, 250, 251, 0.95) 0%, rgba(249, 250, 251, 0.9) 100%);
+  background: linear-gradient(180deg, rgb(249, 250, 251) 0%, rgb(249, 250, 251) 100%);
 }
 
 /* Kereső input */

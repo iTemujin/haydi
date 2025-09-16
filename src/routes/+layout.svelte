@@ -77,8 +77,7 @@
 /* Header */
 header {
   position: fixed;
-  background-color: var(--_background);
-  border-bottom: 3px solid var(--_Contcolor);
+  backdrop-filter: blur(8px);
   top: 0;
   z-index: 100;
   width: 100%;
@@ -143,6 +142,6 @@ header::after {
 
 
 
-<main style="position:relative; top: 3.5rem;">
+<main style="top: 4rem; position: relative;">
 	{@render children?.()}
 </main>
