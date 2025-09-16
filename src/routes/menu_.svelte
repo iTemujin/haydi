@@ -32,7 +32,7 @@
 
     
     <div class="container mycontainer">
-        {#each ide as option}
+            {#each ide as option}
             <div transition:fly={{ duration:2300, x:-300 }} style="width:100%; display:flex; justify-content:center;"><Button title={option} /></div>
         {/each}
     </div>

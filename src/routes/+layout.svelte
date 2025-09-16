@@ -39,6 +39,7 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+  <title>H a y d i h a</title>
 </svelte:head>
 
 
@@ -55,8 +56,9 @@
 {:else if ico.search}
   <Search {ico} />
 {:else if ico.user}
-  <User />
+  <User {ico} />
 {/if}
+
 
 
 
@@ -105,7 +107,7 @@ header::after {
   font-size: 1.2rem;
   padding: 1px 6px;
   color:#ffffff;
-  background-color: var(--_pointer);
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
   border-radius: 4px;
   letter-spacing: 0.05em;
   margin-left: 0.2rem;
@@ -141,6 +143,6 @@ header::after {
 
 
 
-<div style="position:relative; top: 3.5rem;">
+<main style="position:relative; top: 3.5rem;">
 	{@render children?.()}
-</div>
+</main>

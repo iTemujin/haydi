@@ -21,7 +21,7 @@
 
     .colorfull_button:hover {
         transform: translateY(-2px) scale(1.05);
-        background-color: var(--_pointer);
+        background: linear-gradient(135deg, #6e8efb, #a777e3);
         color: white;
         transition: 0.3s;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
