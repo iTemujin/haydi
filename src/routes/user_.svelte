@@ -24,7 +24,8 @@ class="user">
     z-index:106;
     position: absolute;
     top: 1rem;
-    left: 1rem;">
+    left: 1rem;
+    cursor: pointer;">
         <i
         class="fas fa-xmark text-black text-lg"></i>
     </button>
@@ -36,98 +37,70 @@ class="user">
 </div>
  
 <style>
+input {
+    height: 3rem;
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    color: #333;
+    padding: 0 1rem;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
 
-    input {
-        background-color: rgba(255, 255, 255, 0.75);
-        border: none;
-        border-radius: 4px;
-        color: var(--Contcolor);
-        box-shadow: inset 0 0 4px 0px black;
-    }
+input:focus {
+    border-color: #6e8efb;
+    box-shadow: 0 0 0 3px rgba(110, 142, 251, 0.15);
+}
 
-    h1 {
-        font-family: 'Orbitron', 'Segoe UI', sans-serif; /* futurisztikus, techno hatás */
-        font-size: 3rem; /* nagy és hangsúlyos */
-        letter-spacing: 2px; /* levelek közti távolság */
-        font-size: 2rem;
-        color: white;
-        text-shadow: 0 0 8px black;
-    }
+h1 {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 1rem;
+}
 
-    .user {
-        color: var(--Contcolor);
-        background-image: url("user.jpg");
-        background-position: center;
-        background-size: cover;
-        position: fixed;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
-        height: 100vh;
-        z-index: 101;
-    }
+.user {
+    background: #fafafa;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 101;
+}
 
-
-    form {
-        backdrop-filter: blur(8px);
-        box-shadow: 0 0 15px 1px rgba(30, 30, 30, 0.25);
-        z-index: 102;
-        padding: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 1.5rem;
-        width: 100vw;
-        height: 100vh;
-        max-width: 600px;
-    }
+form {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
 
 .from_button {
-    position: relative;
-    padding: 15px 50px;
-    font-size: 1.2rem;
-    font-weight: bold;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 500;
     color: #fff;
     background: linear-gradient(135deg, #6e8efb, #a777e3);
     border: none;
-    border-radius: 12px;
+    border-radius: 8px;
     cursor: pointer;
-    overflow: hidden;
-    z-index: 1;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s ease;
+    transition: background 0.3s ease, transform 0.15s ease;
 }
 
-.from_button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 200%;
-    height: 100%;
-    background: linear-gradient(
-        120deg,
-        rgba(255,255,255,0) 0%,
-        rgba(200, 180, 255, 0.25) 50%, /* lila fény */
-        rgba(255,255,255,0) 100%
-    );
-    transform: skewX(-20deg);
-    pointer-events: none;
-}
-
-.from_button:hover::before {
-    animation: shine 1s ease forwards;
-}
-
-@keyframes shine {
-    0% {
-        left: -100%;
-    }
-    100% {
-        left: 100%;
-    }
+.from_button:hover {
+    background: linear-gradient(135deg, #5a7cf3, #9465dc);
+    transform: translateY(-2px);
 }
 
 </style>

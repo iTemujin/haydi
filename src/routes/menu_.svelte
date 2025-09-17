@@ -25,7 +25,9 @@
     style="
     position: absolute;
     top: 1rem;
-    left: 1rem;">
+    left: 1rem;
+    cursor: pointer;">
+
         <i
         class="fas fa-xmark text-black text-lg"></i>
     </button>
