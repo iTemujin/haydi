@@ -7,8 +7,6 @@
 
 
 
-  import { fade } from 'svelte/transition';
-
   import Menu from './menu_.svelte';
   import Search from './search_.svelte';
   import User from './user_.svelte'
