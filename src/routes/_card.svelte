@@ -1,10 +1,37 @@
 <script>
-    let { product } = $props()
+    let { product, productSee } = $props()
+
+
+    let like =  $state(false)
 </script>
 
-<article class="product-card">
+<article
+onclick={()=>{
+    productSee = true
+}}
+class="product-card">
     <div class="img" style="background-image: url({product.image});">
-        <button class="heart-btn far fa-heart"></button>
+        {#if like} 
+            <button
+            onclick={(e)=>{
+                e.stopPropagation();
+                like = false
+            }}
+            style="
+                    background-color: #e11d48;
+                    color: white;
+                    " class="heart-btn fas fa-heart"></button>
+        {:else}
+            <button
+            onclick={(e)=>{
+                e.stopPropagation();
+                like = true
+            }}
+            style="
+                    background-color: white;
+                    color: #333;
+                    " class="heart-btn far fa-heart"></button>
+        {/if}
     </div>
     <h2>{product.title}</h2>
     <span class="price">{product.price}</span>
@@ -19,9 +46,10 @@
         position: relative;
     }
 
+
     .img {
         width: 100%;
-        height: 300px;
+        aspect-ratio: 1 / 1.5;  
         background-position: center;
         background-size: cover;
         position: relative; /* fontos! hogy a button absolute-olható legyen ide */
@@ -32,16 +60,14 @@
         top: 10px;
         right: 10px;
         font-size: 1rem;
-        color: #333;
-        background: none;
         border: none;
         cursor: pointer;
         width: 1.875rem;
         height: 1.875rem;
         border-radius: 50%;
-        background-color: white;
         box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2);
-        transition: 0.2s ease;
+        transition: all 0.2s ease;
+        
     }
 
     .heart-btn:hover {
@@ -49,9 +75,10 @@
         transform: scale(1.1);
     }
 
-    .heart-btn:focus {
-        outline: 3px solid rgba(219,39,119,0.55)
+    .heart-btn:active {
+        transform: scale(1.2);
     }
+
     
 
     .heart-btn[disabled]{ opacity:0.6; cursor: not-allowed; }
@@ -72,11 +99,14 @@
         font-weight: bold;
     }
 
-    @media screen and (max-width: 780px) {
+    @media screen and (max-width: 1300px) {
         .product-card {
             padding: 0px;
             grid-template-columns: repeat(2, 1fr);
             gap: 5px;
+
         }
     }
+
+
 </style>
