@@ -1,6 +1,5 @@
 <script>
     let { productSee } = $props();
-
 </script>
 
 <div
