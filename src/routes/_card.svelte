@@ -3,11 +3,12 @@
 
 
     let like =  $state(false)
+
 </script>
 
 <article
 onclick={()=>{
-    productSee = true
+    productSee.see = {'title': product.title, img: product.image, price: product.price}
 }}
 class="product-card">
     <div class="img" style="background-image: url({product.image});">

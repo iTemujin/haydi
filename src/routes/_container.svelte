@@ -9,19 +9,17 @@
         { image: "https://w0.peakpx.com/wallpaper/334/1020/HD-wallpaper-jennie-blackpink-korean-singer-model-thumbnail.jpg", title: "Termék 4", description: "Leírás 4", price: "$19.99" },
         { image: "https://cdn.tatlerasia.com/tatlerasia/i/2023/03/28185238-bts-jungkook-calvin-klein-campaign-2023-underwear-model-kpop-ambassador-sp23-jung-kook-3-photo-credit-park-jong-ha-cropped_cover_1599x837.jpg", title: "Jungkook", description: "Jungkook", price: "$1 929 900,99"  },
        
-        { image: "https://linguasia.com/wp-content/uploads/Han-Euddeum-1024x682.jpg", title: "Termék 1", description: "Leírás 1", price: "$9.99" },
-        { image: "https://image.kpopmap.com/2022/08/kpop-idol-vs-model-twice-sana_9.jpg", title: "Termék 2", description: "Leírás 2", price: "$12.99" },
-        { image: "https://images.squarespace-cdn.com/content/v1/6204821bfe06b76898b431c5/80221678-0539-4495-8007-0096677e1eca/image00016.jpeg", title: "Termék 3", description: "Leírás 3", price: "$15.99" },
-        { image: "https://cdn.mos.cms.futurecdn.net/TffczLphkRvUoKr2KHy72n.jpg", title: "Termék 4", description: "Leírás 4", price: "$19.99" },
-        { image: "https://static.pullandbear.net/2/static2/itxwebstandard/responsive/genderselector/woman_m.jpg?ts=20250917021204", title: "Jungkook", description: "Jungkook", price: "$1 929 900,99"  },
-        
         
     ];
 
-    let productSee = $state(false)
+    let productSee = $state({});
+
 </script>
 
+{#if productSee.see}
 <Product {productSee} />
+{/if}
+
 
 <div class="product-grid">
     {#each products as product}
@@ -36,7 +34,7 @@
     padding: 15px; 
 }
 
-/* Mobilon két oszlop */
+/* Mobile */
 @media screen and (max-width: 600px) {
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
