@@ -3,66 +3,85 @@
     let { productSee } = $props();
 </script>
 
+
 <div
 transition:fade={{ duration: 300 }}
-onclick={()=>{
-    productSee.see = null
-}}
 class="product">
-    <div style="background-image: url({productSee.see.img});" class="bgimg">
-        <div style="background-image: url({productSee.see.img});" class="img"></div>
+    <div class="frist episode">
+        <div style="background-image: url(https://4kwallpapers.com/images/wallpapers/jungkook-bts-south-1080x2160-9554.jpg);" class="img"></div>
+        <div class="content">
+            <h1>{productSee.see.title}</h1>
+            <p>{productSee.see.price}</p>
+            <button>Kosarba</button>
+        </div>
     </div>
-    <div class="main">
-        <h1 style="padding: 2rem;">{productSee.see.title}</h1>
+    <div class="second episode">
+        <div class="content"></div>
+        <div style="background-image: url(https://i.pinimg.com/originals/eb/6b/da/eb6bda5b32e330ba0174c87bbd90f2e1.gif);" class="img"></div>
+    </div>
+
+    <div class="three episode">
+        <div style="background-image: url(https://i.pinimg.com/736x/dd/19/d2/dd19d2f020e41deb631922a3604fa77b.jpg);" class="img"></div>
+        <div class="content"></div>
     </div>
 </div>
 
 <style>
     .product {
         position: fixed;
+        overflow-x: hidden;
+        inset: 0;
+        background-color: rgb(255, 255, 255);
+        z-index: 200;
+    }
+
+    .episode {
         display: flex;
-        top: 0;
+        justify-content: space-between;
         width: 100vw;
-        height: 100vh;
-        z-index: 1000;
-        overflow: hidden;
-        transition: all 0.4s ease;
-    }
-
-
-    .bgimg {
-        background-position: center;
-        background-size: cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50%;
-        height: 100%;
-    }
-
-    .bgimg::before {
-        position: absolute;
-        content:'';
-        backdrop-filter: blur(8px);
-        width: 50%;
-        height: 100%;
+        height: 80vh;
+        margin-bottom: 10vh;
     }
 
     .img {
         position: relative;
-        display: block;
-        content: '';
-        width: 75%;
-        height: 75%;
+        width: 40%;
+        height: 100%;
         background-position: center;
         background-size: cover;
+
     }
 
-    
-
-    .main {
-        background-color: rgb(255, 255, 255);
+    .content {
         width: 50%;
         height: 100%;
     }
+
+    .frist .img {
+        left: 10vw;
+    }
+
+    .frist .content {
+
+        color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+
+    .second .content {
+        
+    }
+
+    .second .img {
+        right: 4vw;
+    }
+
+    .three .img {
+        left: 3vw;
+    }
+
 </style>

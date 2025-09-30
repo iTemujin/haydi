@@ -1,4 +1,5 @@
 <script>
+    import { fly } from 'svelte/transition';
     let { product, productSee } = $props()
 
 
