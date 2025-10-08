@@ -12,7 +12,6 @@
 
 <style>
     .main {
-        background-image: url("bg.png");
         background-size: cover;
         background-position: center;
         height: 100vh;
